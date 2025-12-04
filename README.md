@@ -29,6 +29,7 @@ python -m venv venv
 source venv/Scripts/activate
 # Linux / macOS
 source venv/bin/activate
+pip install -r requirements_def.txt  # Версия с тестами
 pip install -r requirements.txt
 ```
 
