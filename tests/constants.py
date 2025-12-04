@@ -31,12 +31,12 @@ DEVELOPERS_DATA_1 = [
 ]
 DEVELOPERS_DATA_2 = [
     {
-        'name': 'John Smith',
-        'position': 'Backend Developer',
-        'completed_tasks': '29',
-        'performance': '4.2',
-        'skills': 'Python, Django, PostgreSQL',
-        'team': 'AI Team',
+        'name': 'Collapse',
+        'position': 'offlane',
+        'completed_tasks': '10000',
+        'performance': '4.8',
+        'skills': 'COLLLAPSE',
+        'team': 'Team Spirit',
         'experience_years': '3',
     },
     {} # Пустая запись для проверки пропуска пустых строк
@@ -46,7 +46,7 @@ TOTAL_RECORDS = len(DEVELOPERS_DATA_1) + len(DEVELOPERS_DATA_2) - 1
 # Ожидаемые флаги командной строки
 REPORT_FLAG = '--report'
 FILES_FLAG = '--files'
-VALID_ARGS = ['--report', 'performance', '--files', 'first.csv', 'second.csv']
+VALID_ARGS = [REPORT_FLAG, 'performance', FILES_FLAG, 'first.csv', 'second.csv']
 VALID_PARSED_ARGS = {
     'report': 'performance',
     'files': ['first.csv', 'second.csv']

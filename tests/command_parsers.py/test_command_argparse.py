@@ -1,11 +1,14 @@
 import pytest
 
 from src.core.data_models import CliOptions
-from tests.constants import VALID_ARGS, VALID_PARSED_ARGS
+from tests.constants import (
+    VALID_ARGS,
+    VALID_PARSED_ARGS
+)
 
 
 def test_argparse_parses_valid_arguments(
-    command_argparse,
+    command_argparse
 ):
     result: CliOptions = command_argparse.parse(VALID_ARGS)
     assert result.report == VALID_PARSED_ARGS['report']

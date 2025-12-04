@@ -2,9 +2,8 @@ from collections import defaultdict
 from typing import Iterable
 
 from src.core.constants import (
-    PERFORMANCE,
+    PERFORMANCE_REPORT_FIELDS,
     PERFORMANCE_REPORT_TITLE,
-    POSITION
 )
 from src.core.data_models import DeveloperRecord, ReportData
 
@@ -31,13 +30,13 @@ class PerformanceReport:
             [
                 position,
                 round(totals[position] / counts[position], 2)
-            ]
+            ] # Округляем для нормализации до передачи в класс вывода.
             for position in totals
         ]
         rows.sort(key=lambda elem: elem[1], reverse=True)
         indexed_rows = [[i, *row] for i, row in enumerate(rows, 1)]
         return ReportData(
             title=PERFORMANCE_REPORT_TITLE,
-            headers=['', POSITION, PERFORMANCE],
+            headers=PERFORMANCE_REPORT_FIELDS,
             rows=indexed_rows,
         )

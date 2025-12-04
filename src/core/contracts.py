@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import (
     Iterable,
     Protocol,
@@ -24,7 +26,7 @@ class CommandParserProtocol(Protocol):
     def parse(
         self,
         args: Sequence[str]
-    ) -> 'CliOptions':
+    ) -> CliOptions:
         """
         Парсит аргументы содержащиеся в args и возвращает
         экземпляр CliOptions.
@@ -40,7 +42,7 @@ class ReaderProtocol(Protocol):
     def read(
         self,
         paths: Sequence[str]
-    ) -> 'Iterable[DeveloperRecord]':
+    ) -> Iterable[DeveloperRecord]:
         """
         Читает и нормализует записи из файлов, указанных в paths.
         Возвращает итератор нормализованных записей DeveloperRecord.
@@ -58,8 +60,8 @@ class ReportProtocol(Protocol):
 
     def generate(
         self,
-        records: Iterable['DeveloperRecord']
-    ) -> 'ReportData':
+        records: Iterable[DeveloperRecord]
+    ) -> ReportData:
         pass
 
 

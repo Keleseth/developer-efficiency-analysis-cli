@@ -42,8 +42,8 @@ class ReportRegistry:
         return self._report_handlers[key]()
 
 
-report_register = ReportRegistry()
-report_register.register(
+report_registry = ReportRegistry()
+report_registry.register(
     name=PERFORMANCE,
     report_handler=PerformanceReport
 )
