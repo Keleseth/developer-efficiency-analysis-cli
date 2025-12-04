@@ -129,19 +129,6 @@ def developer_record() -> Iterable[DeveloperRecord]:
 
 
 @pytest.fixture
-def developer_record() -> Iterable[DeveloperRecord]:
-    yield DeveloperRecord(
-        name='Collapse',
-        position='offlane',
-        completed_tasks=10000,
-        performance=4.8,
-        skills=['COLLLAPSE'],
-        team='Team Spirit',
-        experience_years='3'
-    )
-
-
-@pytest.fixture
 def report_registry() -> ReportRegistry:
     registry = ReportRegistry()
     registry.register(
