@@ -24,6 +24,8 @@ class PerformanceReport:
         totals = defaultdict(float)
         counts = defaultdict(int)
         for record in records:
+            if record.performance is None:
+                continue
             totals[record.position] += record.performance
             counts[record.position] += 1
         rows = [

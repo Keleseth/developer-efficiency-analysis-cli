@@ -116,15 +116,15 @@ def app_service_dependencies() -> dict:
 
 
 @pytest.fixture
-def developer_record() -> Iterable[DeveloperRecord]:
+def incorrect_developer_record() -> Iterable[DeveloperRecord]:
     yield DeveloperRecord(
-        name='Collapse',
-        position='offlane',
-        completed_tasks=10000,
-        performance=4.8,
-        skills=['COLLLAPSE'],
-        team='Team Spirit',
-        experience_years='3'
+        name='Incorrect',
+        position='',
+        completed_tasks=0,
+        performance=None,
+        skills=[],
+        team='',
+        experience_years='1'
     )
 
 

@@ -48,3 +48,11 @@ def test_generate_handles_empty_data(
 ):
     report_data = performance_report_handler.generate([])
     assert report_data.rows == []
+
+
+def test_generate_skips_incorrect_performance_records(
+    incorrect_developer_record,
+    performance_report_handler
+):
+    result = performance_report_handler.generate([incorrect_developer_record])
+    assert len(result.rows) == 0
