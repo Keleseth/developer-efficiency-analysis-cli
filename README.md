@@ -7,6 +7,10 @@
 
 ---
 
+## Требования
+- Python **3.12+**
+- Поддерживаемые ОС: Windows, Linux, macOS
+
 ## Описание проекта
 
 Утилита считывает один или несколько CSV-файлов с данными о разработчиках и формирует сортированный отчет со средней эффективностью по каждой должности.
@@ -29,8 +33,11 @@ python -m venv venv
 source venv/Scripts/activate
 # Linux / macOS
 source venv/bin/activate
-pip install -r requirements_dev.txt  # Версия с тестами
+# Установка зависимостей
 pip install -r requirements.txt
+
+# Зависимости для запуска тестов
+pip install -r requirements_dev.txt
 ```
 
 ## Пример использования
